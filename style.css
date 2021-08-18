@@ -1,6 +1,6 @@
 body{
     background-color: rgb(231, 192, 140);
-    font-family: 'Exo 2' , sans-serif;
+    font-family: 'Tinos', serif;
 }
 
 .stv-div{
@@ -10,7 +10,35 @@ body{
 }
 
 .stv-div img {
-    width: 20%;
+    width: 20rem;
+}
+.stv-div button {
+
+    font-family: 'Tinos', serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    margin: 2rem;
+    padding: 1.25rem;
+
+    background-color: #7c470e;
+    color: #fce304;
+    
+}
+
+.stv-div-cards {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.stv-div-cards img {
+    width: 10rem;
+    height: 10rem;
+    background-color: rgba(255, 246, 246, 0.733);
+    margin: 5px;
 }
 
 footer{
