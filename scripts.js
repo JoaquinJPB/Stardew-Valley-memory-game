@@ -1,5 +1,6 @@
 
 const cards = document.querySelectorAll('.memory-card');
+cards.forEach(card => card.addEventListener('click', flipCard));
 
 let firstCard, secondCard;
 let hasFlippedCard = false;
@@ -9,20 +10,27 @@ function flipCard(){
     if(!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
-    } else {
-        hasFlippedCard = false;
-        secondCard = this;
-        if (firstCard.dataset.stardew === secondCard.dataset.stardew) {
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard);
-        } else {
-            setTimeout( () => {
-                firstCard.classList.remove('flip');
-                secondCard.classList.remove('flip');
-            }, 1000);
-        }
-        
+        return;
     }
+    hasFlippedCard = false;
+    secondCard = this;
+    checkMatch();
 }
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+function checkMatch(){
+    let isMatch = firstCard.dataset.stardew === secondCard.dataset.stardew;
+    isMatch ? disableFlipCards() : unflipCards();
+}
+
+function disableFlipCards(){
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+}
+
+function unflipCards() {
+    setTimeout( () => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+    }, 1000);
+}
+
