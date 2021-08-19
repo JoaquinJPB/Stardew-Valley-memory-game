@@ -44,3 +44,10 @@ function unflipCards() {
     }, 1000);
 }
 
+(function shuffle(){
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 25);
+        card.style.order = randomPos;
+    });
+})();
+
