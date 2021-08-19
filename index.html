@@ -6,47 +6,95 @@
     <meta name="copyright" content="Joaquin" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stardew Valley Memory Game</title>
-    <link href="style.css" rel="stylesheet" >
     <link rel="icon" type="image/svg+xml" href="images/icons8-valle-stardew.svg" sizes="any"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Tinos:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet" >
 </head>
 <body>
-    <section>
-        <div class="stv-div" id="div-game">
-            <img src="images/Main_Logo.png">
-            <h1 id='description'>¡Encuentra las 10 parejas del mundo de Stardew Valley!</h1>
-            <div class="stv-div-cards" id="cards">
-
-                <img src="images/cards/stardew-valley-chest.png">
-                <img src="images/cards/stardew-valley-chicken.png">
-                <img src="images/cards/stardew-valley-gunther.png">
-                <img src="images/cards/stardew-valley-hoe.png">
-                <img src="images/cards/stardew-valley-junimo.png">
-                <img src="images/cards/stardew-valley-leah.png">
-                <img src="images/cards/stardew-valley-lewis.png">
-                <img src="images/cards/stardew-valley-robin.png">
-                <img src="images/cards/stardew-valley-stardrop.png">
-                <img src="images/cards/stardew-valley-watering-can.png">
-
-                <img src="images/cards/stardew-valley-chicken.png">
-                <img src="images/cards/stardew-valley-gunther.png">
-                <img src="images/cards/stardew-valley-chest.png">
-                <img src="images/cards/stardew-valley-junimo.png">
-                <img src="images/cards/stardew-valley-stardrop.png">
-                <img src="images/cards/stardew-valley-hoe.png">
-                <img src="images/cards/stardew-valley-watering-can.png">
-                <img src="images/cards/stardew-valley-robin.png">
-                <img src="images/cards/stardew-valley-lewis.png">
-                <img src="images/cards/stardew-valley-leah.png">
-            </div>
-            <button onclick=start_game() id="button-start">Empezar juego!</button>
+    <section class="memory-game">
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-chest.png" alt="Chest">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-fish.png" alt="Fish">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-gunther.png" alt="Gunther">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-fish.png" alt="Fish">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-hoe.png" alt="Hoe">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-junimo.png" alt="Jumino">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-stardrop.png" alt="StarDrop">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-leah.png" alt="Leah">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-watering-can.png" alt="Watering Can">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-chest.png" alt="Chest">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-lewis.png" alt="Lewis">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-robin.png" alt="Robin">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-leah.png" alt="Leah">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-robin.png" alt="Robin">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-junimo.png" alt="Jumino">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-hoe.png" alt="Hoe">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-gunther.png" alt="Gunther">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-stardrop.png" alt="StarDrop">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-lewis.png" alt="Lewis">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
+        </div>
+        <div class="memory-card">
+            <img  class="front-face" src="images/cards/stardew-valley-watering-can.png" alt="Watering Can">
+            <img  class="back-face" src="images/cards/stardew-valley-chicken.png" alt="Chicken">
         </div>
     </section>
-    <footer>
-        <p>Copyright &copy; 2021 All Rights Reserved by Joaquin Pastore Barrios</p>
-    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>

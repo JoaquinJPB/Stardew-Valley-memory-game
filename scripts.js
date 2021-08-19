@@ -1,11 +1,8 @@
 
-function start_game(){
+const cards = document.querySelectorAll('.memory-card');
 
-    let div_images = document.createElement("div");
-
-
-    document.getElementById("button-start").style.display = 'none';
-    document.getElementById("description").style.display = 'none';
-
-    document.getElementById("div-game").appendChild(div_images);
+function flipCard(){
+    this.classList.toggle('flip');
 }
+
+cards.forEach(card => card.addEventListener('click', flipCard));
