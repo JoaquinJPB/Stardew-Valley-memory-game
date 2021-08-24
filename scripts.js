@@ -5,6 +5,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 let firstCard, secondCard;
 let lockBoard = false;
 let hasFlippedCard = false;
+let score = 0;
 
 function flipCard(){
     if (lockBoard) return;
@@ -27,6 +28,8 @@ function checkMatch(){
 function disableFlipCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    score++;
+    winGame();
     resetBoard();
 }
 
@@ -42,6 +45,17 @@ function unflipCards() {
         secondCard.classList.remove('flip');
         resetBoard();
     }, 1000);
+}
+
+function winGame(){
+    if (score == 10){
+        Swal.fire({
+            title: 'Congratulations you have found all pairs!',
+            confirmButtonColor: '#fce304',
+            icon: 'success',
+            iconColor: '#fce304'
+        });
+    }
 }
 
 (function shuffle(){
