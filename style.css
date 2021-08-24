@@ -9,6 +9,8 @@ body{
     background-color: rgb(231, 192, 140);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     font-family: 'Style Script', cursive;
 }
 
@@ -51,10 +53,8 @@ h1 {
 
 .memory-game {
     width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     margin-bottom: 1rem;
     perspective: 1000px;
 }
