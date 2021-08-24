@@ -8,16 +8,27 @@ body{
     height: 100vh;
     background-color: rgb(231, 192, 140);
     display: flex;
+    flex-wrap: wrap;
     font-family: 'Style Script', cursive;
 }
 
 section {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(111, 63, 12);
 }
 
 .main-title {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,20 +46,22 @@ h1 {
     font-weight: bold;
     padding: 0.25rem;
     text-align: center;
-    color: #6f3f0c
+    color: rgb(111, 63, 12)
 }
 
 .memory-game {
-    width: 55.7rem;
+    width: 60%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 1rem;
     perspective: 1000px;
 }
 
 .memory-card {
-    width: 10rem;
-    height: 10rem;
+    width: 8.5rem;
+    height: 9rem;
     margin: 0.5rem;
     position: relative;
     transform: scale(1);
@@ -72,7 +85,7 @@ h1 {
     padding: 2rem;
     border-radius: 5px;
     position: absolute;
-    background-color: #fce304;
+    background-color: rgb(252, 227, 4);
     backface-visibility: hidden;
 }
 
