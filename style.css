@@ -79,6 +79,7 @@ h1 {
     transform: rotateY(180deg);
 }
 
+
 .front-face,
 .back-face {
     width: 100%;
@@ -92,4 +93,5 @@ h1 {
 
 .front-face {
     transform: rotateY(180deg);
+    background-color: rgb(47, 185, 70);
 }
