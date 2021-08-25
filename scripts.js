@@ -62,7 +62,7 @@ function winGame(){
             icon: 'success',
             iconColor: '#2fb946'
         });
-        setTimeout( () => {winSound.play()},2000);
+        setTimeout( () => {winSound.play()},1000);
     }
 }
 
