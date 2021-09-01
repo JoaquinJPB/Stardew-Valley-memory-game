@@ -85,6 +85,7 @@ h1 {
 
 .memory-card.flip {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);;
 }
 
 .front-face,
