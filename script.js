@@ -4,9 +4,11 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 const mutedButton = document.getElementById('muted');
 const unmutedButton = document.getElementById('unmuted');
+const playButton = document.getElementById('play');
 
 mutedButton.addEventListener('click', muteSound);
 unmuted.addEventListener('click',unmuteSound);
+playButton.addEventListener('click',resetGame);
 
 let firstCard, secondCard;
 let lockBoard, hasFlippedCard, muted = false;
@@ -76,8 +78,19 @@ function winGame(){
             icon: 'success',
             iconColor: '#2fb946'
         });
-        setTimeout( () => {audio.winSound.play()},1000);
+        setTimeout( () => {
+            if (muted == false) {
+                audio.winSound.play()
+            }
+        },1000);
     }
+}
+
+function resetGame(){
+    score = 0;
+    cards.forEach(card => card.classList.remove('flip'));
+    cards.forEach(card => card.addEventListener('click', flipCard));
+    shuffle();
 }
 
 function muteSound() {
@@ -92,10 +105,11 @@ function unmuteSound() {
     muted = false;
 }
 
-(function shuffle(){
+function shuffle(){
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 25);
         card.style.order = randomPos;
     });
-})();
+}
 
+shuffle();

@@ -65,6 +65,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 1rem;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
 }
 
 .memory-card {
@@ -109,14 +110,14 @@ h1 {
     width: 100%;
 }
 
-.button-muted, .button-unmuted {
-    position: absolute;
+.button-muted, .button-unmuted, .button-play {
     margin: 10px;
-    font-size: 2rem;
+    font-size: 2.75rem;
     text-align: center;
+    color:  rgb(111, 63, 12);
 }
 
-.button-muted:active, .button-unmuted:active {
+.button-muted:active, .button-unmuted:active, .button-play:active {
     transform: scale(.90);
 }
 
@@ -129,15 +130,13 @@ h1 {
 @media screen and (max-width: 992px) {
     .memory-game {
         grid-template-columns: repeat(4,1fr);
-    }
-    
+    }  
 }
 
 @media screen and (max-width: 768px) {
     .memory-game {
         grid-template-columns: repeat(3,1fr);
-    }
-    
+    }   
 }
 
 @media screen and (max-width: 576px) {
@@ -147,7 +146,5 @@ h1 {
 
     h1 {
         font-size: 2.6rem;
-    } 
-    
-    
+    }  
 }
