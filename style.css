@@ -24,24 +24,11 @@ section {
 footer {
     align-self: flex-end;
     text-align: center;
+    position: sticky;
     width: 100%;
     padding: 1rem;
     background-color: rgb(111, 63, 12);
     font-size: 1.25rem;
-}
-
-.main-title {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.main-title img {
-    width: 35rem;
-    height: 15rem;
-    padding: 1rem;
 }
 
 h1 {
@@ -52,8 +39,24 @@ h1 {
     color: rgb(111, 63, 12)
 }
 
+.main-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.25rem;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .memory-game {
-    width: 60%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 1rem;
@@ -79,7 +82,6 @@ h1 {
     transform: rotateY(180deg);
 }
 
-
 .front-face,
 .back-face {
     width: 100%;
@@ -94,4 +96,22 @@ h1 {
 .front-face {
     transform: rotateY(180deg);
     background-color: rgb(47, 185, 70);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.button-muted {
+    position: absolute;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.button-muted:active {
+    transform: scale(.95);
 }
