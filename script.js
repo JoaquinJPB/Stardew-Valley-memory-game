@@ -3,13 +3,13 @@ const cards = document.querySelectorAll('.memory-card');
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 const mutedButton = document.getElementById('muted');
+const unmutedButton = document.getElementById('unmuted');
+
 mutedButton.addEventListener('click', muteSound);
+unmuted.addEventListener('click',unmuteSound);
 
 let firstCard, secondCard;
-let lockBoard = false;
-let hasFlippedCard = false;
-let muted = false;
-let score = 0;
+let lockBoard, hasFlippedCard, muted = false;
 
 const audio = {
     flipCardSound : new Audio("audio/card-flip-sound-effect.mp3"),
@@ -80,7 +80,15 @@ function winGame(){
 }
 
 function muteSound() {
+    mutedButton.style.display="none";
+    unmutedButton.style.display="block";
     muted = true;
+}
+
+function unmuteSound() {
+    unmutedButton.style.display="none"
+    mutedButton.style.display="block";
+    muted = false;
 }
 
 (function shuffle(){
