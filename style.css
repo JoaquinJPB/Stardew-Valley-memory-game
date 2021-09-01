@@ -66,6 +66,9 @@ h1 {
     margin-bottom: 1rem;
     perspective: 1000px;
     -webkit-perspective: 1000px;
+    -moz-perspective:  1000px;
+    -ms-perspective: 1000px;
+    -moz-perspective: 1000px;
 }
 
 .memory-card {
@@ -76,16 +79,29 @@ h1 {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+    -webkit-transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: transform .5s;
+    -moz-transform: scale(1);
+    -moz-transform-style: preserve-3d;
+    -moz-transition: transform .5s;
 }
 
 .memory-card:active {
     transform: scale(.97);
     transition: transform .2s;
+    -webkit-transform: scale(.97);
+    -webkit-transition: transform .2s;
+    -moz-transform: scale(.97);
+    -moz-transition: transform .2s;
 }
 
 .memory-card.flip {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
 }
 
 .front-face,
@@ -97,11 +113,17 @@ h1 {
     position: absolute;
     background-color: rgb(252, 227, 4);
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .front-face {
-    transform: rotateY(180deg);
     background-color: rgb(47, 185, 70);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 .options {
