@@ -10,6 +10,7 @@ unmuted.addEventListener('click',unmuteSound);
 
 let firstCard, secondCard;
 let lockBoard, hasFlippedCard, muted = false;
+let score = 0;
 
 const audio = {
     flipCardSound : new Audio("audio/card-flip-sound-effect.mp3"),
